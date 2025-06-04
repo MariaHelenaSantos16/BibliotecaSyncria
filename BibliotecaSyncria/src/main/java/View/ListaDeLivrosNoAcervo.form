@@ -50,6 +50,8 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="guiaRankingLeitoresMouseClicked"/>
           </Events>
         </Menu>
+        <Menu class="javax.swing.JMenu" name="guiaGrafico">
+        </Menu>
         <Menu class="javax.swing.JMenu" name="guiaBancoDadosTurmas">
           <Properties>
             <Property name="text" type="java.lang.String" value="Banco de Dados das Turmas |"/>
@@ -57,8 +59,6 @@
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="guiaBancoDadosTurmasMouseClicked"/>
           </Events>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="guiaGrafico">
         </Menu>
       </SubComponents>
     </Menu>
