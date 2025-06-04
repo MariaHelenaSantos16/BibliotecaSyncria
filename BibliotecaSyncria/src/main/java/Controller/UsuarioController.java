@@ -18,8 +18,8 @@ public class UsuarioController {
         String sql = "INSERT INTO Usuario (nome,senha,cpf)"
         + " values(?,?,?)";
         
-        try(Connection con = ConexaoComBancoDados.conectar();
-                PreparedStatement ps=con.prepareStatement(sql)){
+        try(Connection conn = ConexaoComBancoDados.conectar();
+                PreparedStatement ps=conn.prepareStatement(sql)){
             
             ps.setString(1, u.getNome());
             ps.setString(2, u.getSenha());
