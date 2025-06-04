@@ -115,18 +115,20 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="textoDataRetiradaRE" min="-2" pref="402" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="butaoDataRetiradaRE" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="selecionarTituloLivro" min="-2" pref="402" max="-2" attributes="0"/>
                                       <Component id="tituloDoLivroRE" min="-2" max="-2" attributes="0"/>
                                       <Component id="tituloDataDevolucaoRE" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="tituloRegistrosRE" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="textoRegistrosRE" alignment="0" min="-2" pref="402" max="-2" attributes="0"/>
+                                      <Component id="tituloDataRetiradaRE1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="textoDataRetiradaRE" min="-2" pref="402" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="butaoDataRetiradaRE" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="selecionarTituloLivro" min="-2" pref="402" max="-2" attributes="0"/>
+                                      <Component id="selecionarAlunoRE1" alignment="0" min="-2" pref="402" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="tituloTabelaSituacaoAlunoRE" max="32767" attributes="0"/>
                                       <Component id="jScrollPane1" pref="414" max="32767" attributes="0"/>
@@ -155,14 +157,12 @@
                               </Group>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="tituloTurnosRE" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="tituloDataRetiradaRE1" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="tituloAlunoRE" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="selecionarTurmaRE" min="-2" pref="402" max="-2" attributes="0"/>
                               <Component id="tituloCodigoDeTurmaRE" min="-2" max="-2" attributes="0"/>
-                              <Component id="selecionarAlunoRE1" min="-2" pref="402" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="selecionarTurnoRE" min="-2" pref="402" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
@@ -196,13 +196,11 @@
                   <Component id="paineliconeSyncriaRegistros" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="tituloTurnosRE" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="selecionarTurnoRE" min="-2" pref="32" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="tituloTurnosRE" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                           <Component id="tituloCodigoDeTurmaRE" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="selecionarTurmaRE" min="-2" pref="32" max="-2" attributes="0"/>
@@ -211,21 +209,14 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="tituloTabelaSituacaoLivrosEmprestadosRE" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="botaoGravar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="selecionarTurnoRE" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jScrollPane6" min="-2" pref="66" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="tituloAlunoRE" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="selecionarAlunoRE1" min="-2" pref="32" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="tituloDataRetiradaRE1" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -237,49 +228,54 @@
                               <Component id="jScrollPane2" alignment="0" min="-2" pref="63" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="textoDataRetiradaRE" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="butaoDataRetiradaRE" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="botaoDevolver" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="botaoRenovar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="tituloAlunoRE" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="selecionarAlunoRE1" min="-2" pref="32" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <Component id="tituloDataRetiradaRE1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="textoDataRetiradaRE" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="butaoDataRetiradaRE" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="tituloDoLivroRE" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                              <Component id="tituloTabelaSituacaoAlunoRE" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoDevolver" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoRenovar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="selecionarTituloLivro" min="-2" pref="32" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="tituloRegistrosRE" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="textoRegistrosRE" min="-2" pref="32" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                  <Component id="tituloDataDevolucaoRE" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="textoDataDevolucaoRE" min="-2" pref="32" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="tituloBimestreRE" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="selecionarBimestroRE" min="-2" pref="32" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane4" min="-2" pref="70" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                          <Component id="tituloTabelaSituacaoAlunoRE" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <Component id="jScrollPane4" min="-2" pref="70" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jScrollPane8" min="-2" pref="178" max="-2" attributes="0"/>
                       <Component id="jScrollPane9" min="-2" pref="178" max="-2" attributes="0"/>
                       <Component id="jScrollPane7" min="-2" pref="178" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                          <Component id="selecionarTituloLivro" min="-2" pref="32" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="tituloRegistrosRE" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="textoRegistrosRE" min="-2" pref="32" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="tituloDataDevolucaoRE" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="textoDataDevolucaoRE" min="-2" pref="32" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="tituloBimestreRE" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="selecionarBimestroRE" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -917,6 +913,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="GRAVAR"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoGravarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="botaoRenovar">
           <Properties>

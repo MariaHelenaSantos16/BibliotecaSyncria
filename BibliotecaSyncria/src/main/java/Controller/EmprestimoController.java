@@ -5,46 +5,39 @@
 package Controller;
 
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
+
 import Model.EmprestimoModel;
 import java.sql.Connection;
-
+import java.sql.SQLException;
 
 /**
  *
  * @author ALUNO
  */
 public class EmprestimoController {
-    
+
     //Cadastrar novos emprestimos
-    
-   /*
-    
-    /* 
     public boolean CadastrarEmprestimo(EmprestimoModel e) {
-    String sql = "INSERT INTO Emprestimo (livrosDevolvidos, saldo, dataRetirada, Aluno_idAluno, Aluno_Turma_idTurma, Livro_idLivro) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Emprestimo (livrosDevolvidos, saldo, dataRetirada, Aluno_idAluno, Aluno_Turma_idTurma, Livro_idLivro) VALUES (?, ?, ?, ?, ?, ?)";
 
-    try (Connection conn = ConexaoComBancoDados.conectar();
-         PreparedStatement ps = conn.prepareStatement(sql)) {
+        try (Connection conn = ConexaoComBancoDados.conectar();
+                PreparedStatement ps = conn.prepareStatement(sql)) {
 
-        ps.setInt(1, e.getLivrosDevolvidos());
-        ps.setInt(2, e.getSaldo());
-        ps.setString(3,e.getDataRetirada());
-        ps.setInt(4, e.getAluno_idAluno());
-        ps.setInt(5, e.getAluno_Turma_idTurma());
-        ps.setInt(6, e.getLivro_idLivro());
+            ps.setInt(1, e.getLivrosDevolvidos());
+            ps.setInt(2, e.getSaldo());
+            ps.setString(3, e.getDataRetirada());
+            ps.setInt(4, e.getAluno_idAluno());
+            ps.setInt(5, e.getAluno_Turma_idTurma());
+            ps.setInt(6, e.getLivro_idLivro());
 
-        int linhasAfetadas = ps.executeUpdate();
-        return linhasAfetadas > 0;
+            int linhasAfetadas = ps.executeUpdate();
+            return true;
 
-    } catch (SQLException e) {
-        e.printStackTrace();
-        return false;
-        
-    }//fim do trycatch
-}//fim da boolean
+        }catch(SQLException err){
+            err.printStackTrace();
+            return false;
 
-    
-    */
-    
+        }//fim do trycatch
+    }//fim da boolean
+
 }//fim da classe
