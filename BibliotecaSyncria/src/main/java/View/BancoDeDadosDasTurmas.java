@@ -4,6 +4,18 @@
  */
 package View;
 
+import Controller.AlunoController;
+import Model.AlunoModel;
+import java.awt.Font;
+import java.awt.GridLayout;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author ALUNO
@@ -13,14 +25,11 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
     /**
      * Creates new form BancoDeDadosDasTurmas
      */
-    
     /*
     espaço para criar o objeto controller
     
     
-    */
-    
-   
+     */
     public BancoDeDadosDasTurmas() {
         initComponents();
     }
@@ -350,13 +359,16 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(painelPrincipalFundo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 12, Short.MAX_VALUE)
+                .addComponent(painelPrincipalFundo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painelPrincipalFundo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(painelPrincipalFundo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -386,23 +398,23 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
     private void guiaRegistroEmprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRegistroEmprestimoMouseClicked
         // TODO add your handling code here:
         TelaRegistrosEmprestimos tela6ParaTela1 = new TelaRegistrosEmprestimos();
-        
+
         //Abrindo a tela 6 para tela 1
         tela6ParaTela1.setVisible(true);
-        
+
         //Fechando a tela
         dispose();
     }//GEN-LAST:event_guiaRegistroEmprestimoMouseClicked
 
     private void guiaListaLivrosAcervoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosAcervoMouseClicked
         // TODO add your handling code here:
-        
+
         //acesso da tela 6 para tela 4
-        ListaDeLivrosNoAcervo tela6ParaTela4 = new  ListaDeLivrosNoAcervo();
-        
+        ListaDeLivrosNoAcervo tela6ParaTela4 = new ListaDeLivrosNoAcervo();
+
         //Abrindo a tela
         tela6ParaTela4.setVisible(true);
-        
+
         //Fechando a tela
         dispose();
     }//GEN-LAST:event_guiaListaLivrosAcervoMouseClicked
@@ -410,53 +422,139 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
     private void guiaRankingLeitoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRankingLeitoresMouseClicked
         // TODO add your handling code here:
         TelaRankingDeLeitores tela6ParaTela5 = new TelaRankingDeLeitores();
-        
+
         //Abrindo a tela 6 para tela 5
         tela6ParaTela5.setVisible(true);
-        
+
         //Fechando a tela
         dispose();
     }//GEN-LAST:event_guiaRankingLeitoresMouseClicked
 
     private void guiaCadastroLivrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaCadastroLivrosMouseClicked
         // TODO add your handling code here:
-        
+
         //acesso da Tela 6 para tela 3
-        TelaDeCadastroDeLivros tela6paratela3 = new  TelaDeCadastroDeLivros ();
-        
+        TelaDeCadastroDeLivros tela6paratela3 = new TelaDeCadastroDeLivros();
+
         //Abrindo a tela
         tela6paratela3.setVisible(true);
-        
+
         //Fechando a tela
         dispose();
     }//GEN-LAST:event_guiaCadastroLivrosMouseClicked
 
     private void guiaListaLivrosEmprestadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosEmprestadosMouseClicked
         // TODO add your handling code here:
-        
+
         //acesso da Tela 6 para tela 2
-        ListaDeLivrosEmprestados tela6paratela2 = new  ListaDeLivrosEmprestados ();
-        
+        ListaDeLivrosEmprestados tela6paratela2 = new ListaDeLivrosEmprestados();
+
         //Abrindo a tela
         tela6paratela2.setVisible(true);
-        
+
         //Fechando a tela 
         dispose();
     }//GEN-LAST:event_guiaListaLivrosEmprestadosMouseClicked
 
     private void guiaGraficoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaGraficoMouseClicked
         // TODO add your handling code here:
+
+        //acesso da tela 6 para tela 7
+        TelaGraficos tela6ParaTela7 = new TelaGraficos();
+
+        //Abrindo a tela
+        tela6ParaTela7.setVisible(true);
+
+        //Fechando a tela
+        dispose();
     }//GEN-LAST:event_guiaGraficoMouseClicked
 
     private void iconeSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconeSairMouseClicked
         // TODO add your handling code here:
-        
+
         //Processo de fechar o Aplicativo
         dispose();
     }//GEN-LAST:event_iconeSairMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+
+        JPanel panel = new JPanel(new GridLayout(0, 2, 5, 5)); // linhas dinâmicas, 2 colunas, espaço de 10px
+        Font fonte = new Font("Segoe UI", Font.PLAIN, 16);
+
+// Nome do Aluno
+        JLabel nomeLabel = new JLabel("Nome do Aluno:");
+        nomeLabel.setFont(fonte);
+        JTextField nomeField = new JTextField(20);
+        nomeField.setFont(fonte);
+        panel.add(nomeLabel);
+        panel.add(nomeField);
+
+// Matrícula
+        JLabel matriculaLabel = new JLabel("Matrícula:");
+        matriculaLabel.setFont(fonte);
+        JTextField matriculaField = new JTextField(10);
+        matriculaField.setFont(fonte);
+        panel.add(matriculaLabel);
+        panel.add(matriculaField);
+
+// Turno
+        JLabel turnoLabel = new JLabel("Turno:");
+        turnoLabel.setFont(fonte);
+        String[] turnos = {"Manhã", "Tarde", "Noite"};
+        JComboBox<String> turnoComboBox = new JComboBox<>(turnos);
+        turnoComboBox.setFont(fonte);
+        panel.add(turnoLabel);
+        panel.add(turnoComboBox);
+
+// Turma (campo de texto)
+        JLabel turmaLabel = new JLabel("Turma:");
+        turmaLabel.setFont(fonte);
+        JTextField turmaField = new JTextField(10);
+        turmaField.setFont(fonte);
+        panel.add(turmaLabel);
+        panel.add(turmaField);
+
+// Exibe o painel com os campos
+        int result = JOptionPane.showConfirmDialog(null, panel, "Cadastro de Aluno", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+
+// Se o usuário clicar em OK
+        if (result == JOptionPane.OK_OPTION) {
+            try {
+                // Pega os dados dos campos
+                String nome = nomeField.getText().trim();
+                int matricula = Integer.parseInt(matriculaField.getText().trim());
+                String turnoSelecionado = (String) turnoComboBox.getSelectedItem();
+                String codigoTurma = turmaField.getText().trim();
+
+                // Aqui simula pegar o id da turma pelo código (por enquanto usando um ID fixo ou fazer busca se quiser)
+                int turmaId = 1; // Depois substituir por busca real no banco
+
+                // Cria o objeto AlunoModel com os dados
+                AlunoModel aluno = new AlunoModel();
+                aluno.setNome(nome);
+                aluno.setMatricula(matricula);
+                aluno.setLivrosEmDivida(0);
+                aluno.setLivrosEmprestados(0);
+                aluno.setLivrosAlugados(0);
+                aluno.setTurmaId(turmaId);
+
+                // Chama o controller
+                AlunoController controller = new AlunoController();
+                boolean sucesso = controller.cadastrarAluno(aluno);
+
+                if (sucesso) {
+                    JOptionPane.showMessageDialog(null, "Aluno cadastrado com sucesso!");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Erro ao cadastrar aluno.", "Erro", JOptionPane.ERROR_MESSAGE);
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Erro nos dados inseridos. Verifique e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
