@@ -7,7 +7,10 @@ package Controller;
 import Model.AlunoModel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -36,5 +39,50 @@ public class AlunoController {
             return false;
         }
     }
-}
+    
+    //Método de Listagem
+    public List<AlunoModel> ListarAlunos(){
+    
+    //criar variavel para receber lista
+    List<AlunoModel> lista = new ArrayList <>();
+    
+    //comando sql pra listar dados do banco de dados
+        
+        String sql = "SELECT * FROM Aluno";
+        
+        try (Connection conn = ConexaoComBancoDados.conectar();
+             PreparedStatement ps = conn.prepareStatement(sql);
+                ResultSet rs = ps.executeQuery()){
+        
+            //laço de repetição para percorrer a lista de turmas
+            while(rs.next()){
+            
+                //objeto do cliente model para receber os dados
+                AlunoModel am = new AlunoModel();
+                
+                am.setIdAluno(rs.getInt("idAluno"));
+                am.setNome(rs.getString("nome"));
+                am.setLivrosEmDivida(rs.getInt("livrosEmDivida"));
+                am.setLivrosEmprestados(rs.getInt("livrosEmprestados"));
+                am.setLivrosAlugados(rs.getInt("livrosAlugados"));
+                am.setMatricula(rs.getInt("matricula"));
+                am.setTurmaId(rs.getInt("turmaId"));
+                
+                //jogando os alunos dentro das lista
+                lista.add(am);
+                
+            }//Fim do While
+            
+            
+            
+            
+        }catch(SQLException e){
+            System.out.println("Erro ao listar alunos"+e);
+        }//fim do trycatch
+        return lista;
+    
+    }//Fim do Método de listar alunos
+    
+    
+}//fim da classe
 

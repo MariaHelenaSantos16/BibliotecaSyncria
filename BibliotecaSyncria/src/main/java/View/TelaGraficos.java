@@ -51,7 +51,7 @@ public class TelaGraficos extends javax.swing.JFrame {
         guiaListaLivrosAcervo = new javax.swing.JMenu();
         guiaRankingLeitores = new javax.swing.JMenu();
         guiaBancoDadosTurmas = new javax.swing.JMenu();
-        guiaGrafico = new javax.swing.JMenu();
+        guiaGrafico1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista de Livros no Acervo");
@@ -65,8 +65,6 @@ public class TelaGraficos extends javax.swing.JFrame {
         escreva1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         escreva1.setForeground(new java.awt.Color(0, 0, 0));
         escreva1.setText("Biblioteca Syncria");
-
-        livroI.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro_(1)_(2).png")); // NOI18N
 
         javax.swing.GroupLayout panelBrancoLayout = new javax.swing.GroupLayout(panelBranco);
         panelBranco.setLayout(panelBrancoLayout);
@@ -88,8 +86,6 @@ public class TelaGraficos extends javax.swing.JFrame {
                     .addComponent(livroI))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
-
-        graficoIcon.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\line-chart (1).png")); // NOI18N
 
         escrevaGrafico.setBackground(new java.awt.Color(255, 255, 255));
         escrevaGrafico.setFont(new java.awt.Font("Segoe UI", 2, 36)); // NOI18N
@@ -278,7 +274,6 @@ public class TelaGraficos extends javax.swing.JFrame {
 
         painelDeRolagem.setViewportView(princPanel);
 
-        guiaRegistroEmprestimo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro.png")); // NOI18N
         guiaRegistroEmprestimo.setText(" Registro de Empréstimo |");
         guiaRegistroEmprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -287,7 +282,6 @@ public class TelaGraficos extends javax.swing.JFrame {
         });
         menugraficos.add(guiaRegistroEmprestimo);
 
-        guiaListaLivrosEmprestados.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro emp. 24.png")); // NOI18N
         guiaListaLivrosEmprestados.setText("Lista de Livros Emprestados |");
         guiaListaLivrosEmprestados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -296,7 +290,6 @@ public class TelaGraficos extends javax.swing.JFrame {
         });
         menugraficos.add(guiaListaLivrosEmprestados);
 
-        guiaCadastroLivros.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\cadastro de livros 24.png")); // NOI18N
         guiaCadastroLivros.setText("Cadastro de Livros |");
         guiaCadastroLivros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -318,7 +311,6 @@ public class TelaGraficos extends javax.swing.JFrame {
         });
         menugraficos.add(guiaRankingLeitores);
 
-        guiaBancoDadosTurmas.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\grupo-de-usuarios_(1).png")); // NOI18N
         guiaBancoDadosTurmas.setText("Banco de Dados das Turmas |");
         guiaBancoDadosTurmas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -327,8 +319,9 @@ public class TelaGraficos extends javax.swing.JFrame {
         });
         menugraficos.add(guiaBancoDadosTurmas);
 
-        guiaGrafico.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\line-chart.png")); // NOI18N
-        menugraficos.add(guiaGrafico);
+        guiaGrafico1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\vinticuatro.png")); // NOI18N
+        guiaGrafico1.setText("Gráfico");
+        menugraficos.add(guiaGrafico1);
 
         setJMenuBar(menugraficos);
 
@@ -452,7 +445,7 @@ public class TelaGraficos extends javax.swing.JFrame {
     private javax.swing.JLabel graficoIcon;
     private javax.swing.JMenu guiaBancoDadosTurmas;
     private javax.swing.JMenu guiaCadastroLivros;
-    private javax.swing.JMenu guiaGrafico;
+    private javax.swing.JMenu guiaGrafico1;
     private javax.swing.JMenu guiaListaLivrosAcervo;
     private javax.swing.JMenu guiaListaLivrosEmprestados;
     private javax.swing.JMenu guiaRankingLeitores;

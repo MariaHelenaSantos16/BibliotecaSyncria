@@ -7,7 +7,7 @@
         <Menu class="javax.swing.JMenu" name="guiaRegistroEmprestimo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\ALUNO\Downloads\registro.png"/>
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\zregistro de emprest.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Registro de Empr&#xe9;stimo |"/>
           </Properties>
@@ -17,6 +17,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="guiaListaLivrosEmprestados">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\livro emp. 24.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Lista de Livros Emprestados |"/>
           </Properties>
           <Events>
@@ -25,6 +28,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="guiaCadastroLivros">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\open-book.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Cadastro de Livros |"/>
           </Properties>
           <Events>
@@ -58,7 +64,13 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="guiaBancoDadosTurmasMouseClicked"/>
           </Events>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="guiaGrafico">
+        <Menu class="javax.swing.JMenu" name="guiaGrafico1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Downloads\vinticuatro.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Gr&#xe1;fico"/>
+          </Properties>
         </Menu>
       </SubComponents>
     </Menu>

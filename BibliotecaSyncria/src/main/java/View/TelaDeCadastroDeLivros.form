@@ -7,7 +7,7 @@
         <Menu class="javax.swing.JMenu" name="guiaRegistroEmprestimo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\ALUNO\Downloads\registro.png"/>
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\zregistro de emprest.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value=" Registro de Empr&#xe9;stimo |"/>
           </Properties>
@@ -18,7 +18,7 @@
         <Menu class="javax.swing.JMenu" name="guiaListaLivrosEmprestados">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\ALUNO\Downloads\livro_emp._24.png"/>
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\livro emp. 24.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Lista de Livros Emprestados |"/>
           </Properties>
@@ -28,6 +28,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="guiaCadastroLivros">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\cadastro de livros 24.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Cadastro de Livros |"/>
           </Properties>
           <Events>
@@ -36,6 +39,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="guiaListaLivrosAcervo">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\open-book.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Lista de Livros no Acervo |"/>
           </Properties>
           <Events>
@@ -52,11 +58,22 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="guiaBancoDadosTurmas">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\grupo-de-usuarios_(1).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Banco de Dados das Turmas |"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="guiaBancoDadosTurmasMouseClicked"/>
           </Events>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="guiaGrafico">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Downloads\vinticuatro.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Gr&#xe1;fico"/>
+          </Properties>
         </Menu>
       </SubComponents>
     </Menu>
@@ -1285,16 +1302,10 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ALUNO\Downloads\livro (1) (2).png"/>
-                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="botaoDeSair">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ALUNO\Downloads\logout_(1).png"/>
-                </Property>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
             </Component>
