@@ -5,9 +5,12 @@
 package View;
 
 import Controller.AlunoController;
+import Controller.TurmaController;
 import Model.AlunoModel;
+import Model.TurmaModel;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.util.List;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JComboBox;
@@ -15,6 +18,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -25,15 +29,54 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
     /**
      * Creates new form BancoDeDadosDasTurmas
      */
-    /*
-    espaço para criar o objeto controller
     
+    //Conexao com o BD com o controller
+    TurmaController turmasController = new TurmaController();
     
-     */
+     
     public BancoDeDadosDasTurmas() {
         initComponents();
+        listarTurmasComboBox();
     }
+    /*
+    //metodo para listar dados na tabela
+    public void listarTurmasTabela(){
+    List<TurmaModel> listaTurmas = controller.ListarTurmas();
+    
+    //criação modelo padrao de tabela
+    DefaultTableModel modelo = new DefaultTableModel();
+   
 
+    for(TurmaModel t: listaTurmas){
+    modelo.addRow(new Object[]{
+    //ordem que está na tabela das telas.
+    t.getDevolvidos(),
+      t.getTurma(),  
+        
+       
+    });
+        
+    }//fim do for
+   
+    
+    }//fim do metodo de listar dados
+    */  
+    
+    public void listarTurmasComboBox(){
+    List<TurmaModel> listaTurmas = turmasController.ListarTurmas();
+    
+    //limpar a comboBox
+    filtroTurma.removeAllItems();
+    
+    //jogar os dados da lista dentro da comboBox
+    for(TurmaModel tu:listaTurmas){
+         filtroTurma.addItem(tu.getCodigoTurma());
+    }//fim do for
+    
+        
+    }//fim do metodo listarTurmasComboBox
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -169,53 +212,53 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
 
         tabelaBDTurmas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Devolvidos", "Alunos", "Livros"
+                "Devolvidos", "Turmas", "Alunos", "Livros"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, true, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
