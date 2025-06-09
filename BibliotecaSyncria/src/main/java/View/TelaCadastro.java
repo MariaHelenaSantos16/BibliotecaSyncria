@@ -17,11 +17,9 @@ public class TelaCadastro extends javax.swing.JFrame {
     /**
      * Creates new form TelaCadastro
      */
-    
     //criando um objeto da classe controller
     UsuarioController controler = new UsuarioController();
-            
-            
+
     public TelaCadastro() {
         initComponents();
     }
@@ -40,7 +38,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         tela2cadastro = new javax.swing.JPanel();
         nomeUsuarioCadastro = new javax.swing.JTextField();
         senhaCadastro = new javax.swing.JLabel();
-        senhaCasatro1 = new javax.swing.JPasswordField();
+        senhaDeCadastro = new javax.swing.JPasswordField();
         butaoCadastrar = new javax.swing.JButton();
         usuarioCadastro = new javax.swing.JLabel();
         usuarioCPF = new javax.swing.JLabel();
@@ -76,11 +74,11 @@ public class TelaCadastro extends javax.swing.JFrame {
         senhaCadastro.setForeground(new java.awt.Color(0, 0, 0));
         senhaCadastro.setText("Senha:");
 
-        senhaCasatro1.setBackground(new java.awt.Color(255, 255, 255));
-        senhaCasatro1.setForeground(new java.awt.Color(0, 0, 0));
-        senhaCasatro1.addActionListener(new java.awt.event.ActionListener() {
+        senhaDeCadastro.setBackground(new java.awt.Color(255, 255, 255));
+        senhaDeCadastro.setForeground(new java.awt.Color(0, 0, 0));
+        senhaDeCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                senhaCasatro1ActionPerformed(evt);
+                senhaDeCadastroActionPerformed(evt);
             }
         });
 
@@ -121,7 +119,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela2cadastroLayout.createSequentialGroup()
                         .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(senhaCasatro1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(senhaDeCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(usuarioCadastro)
                             .addComponent(nomeUsuarioCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(usuarioCPF)
@@ -137,8 +135,8 @@ public class TelaCadastro extends javax.swing.JFrame {
             .addGroup(tela2cadastroLayout.createSequentialGroup()
                 .addContainerGap(35, Short.MAX_VALUE)
                 .addComponent(usuarioCadastro)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(nomeUsuarioCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(nomeUsuarioCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(usuarioCPF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -146,7 +144,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(senhaCadastro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(senhaCasatro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(senhaDeCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(butaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48))
@@ -188,32 +186,31 @@ public class TelaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_nomeUsuarioCadastroActionPerformed
 
     private void butaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butaoCadastrarActionPerformed
+
         // TODO add your handling code here:
-        
         //criar um objeto da classe
-        
         UsuarioModel usuario = new UsuarioModel();
         //cadastrar os dados dentro da classe UsuarioModel
-        usuario.setNome(nomeUsuarioCadastro.getText());
-        usuario.setCpf(campoCPFdigitado.getText());
-        //capturar dados do campo Password Fild
-        usuario.setSenha( new String(senhaCasatro1.getPassword()));
-        
+        if (nomeUsuarioCadastro != null & campoCPFdigitado != null & senhaDeCadastro != null) {
+            usuario.setNome(nomeUsuarioCadastro.getText());
+            usuario.setCpf(campoCPFdigitado.getText());
+            //capturar dados do campo Password Fild
+            usuario.setSenha(new String(senhaDeCadastro.getPassword()));
+        }
+
         boolean result = controler.CadastrarUsuario(usuario);
-        if(result!=false){
-        JOptionPane.showMessageDialog(null, "Cadastro com sucesso! ");
-    }else{
-       JOptionPane.showMessageDialog(null, "Erro ao realizar cadastro!! ") ;
+        if (result != false) {
+            JOptionPane.showMessageDialog(null, "Cadastro com sucesso! ");
+        } else {
+            JOptionPane.showMessageDialog(null, "Erro ao realizar cadastro!! ");
         }//fim do (if/else)
-        
-        
-        
-        
+
+
     }//GEN-LAST:event_butaoCadastrarActionPerformed
 
-    private void senhaCasatro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaCasatro1ActionPerformed
+    private void senhaDeCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaDeCadastroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_senhaCasatro1ActionPerformed
+    }//GEN-LAST:event_senhaDeCadastroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -256,7 +253,7 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField nomeUsuarioCadastro;
     private javax.swing.JLabel senhaCadastro;
-    private javax.swing.JPasswordField senhaCasatro1;
+    private javax.swing.JPasswordField senhaDeCadastro;
     private javax.swing.JPanel tela1Cadastro;
     private javax.swing.JPanel tela2cadastro;
     private javax.swing.JLabel usuarioCPF;

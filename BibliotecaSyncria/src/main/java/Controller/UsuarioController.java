@@ -31,7 +31,7 @@ public class UsuarioController {
             return retorno >0;
             
         }catch(SQLException e){
-            e.getStackTrace();
+           e.getStackTrace();
         return false;
         }
         
