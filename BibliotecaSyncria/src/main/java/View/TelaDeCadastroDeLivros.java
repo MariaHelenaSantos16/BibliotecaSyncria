@@ -630,36 +630,52 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
                                         .addGap(325, 325, 325))
                                     .addGroup(painelPrincipalLayout.createSequentialGroup()
                                         .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(campoDeRespostaDeAnoFabrecacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(letriroAnoFabricacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(20, 20, 20)
-                                        .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(letreiroDatCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(campoDeRespostaDeDataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(20, 20, 20)
-                                        .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(campoDeRespotaDeObservacao, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(letreiroObservacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(29, 29, 29)
-                                        .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                            .addGroup(painelPrincipalLayout.createSequentialGroup()
-                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(letreiroAquisiçao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(campoRespostaAquisicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap())))))
-            .addGroup(painelPrincipalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(letreiroAquisiçao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(campoRespostaAquisicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addContainerGap())))))))
+        );
+
+        painelDoLetreiroPrincipal.setBackground(new java.awt.Color(208, 224, 235));
+
+        letreiroTituloPrincipal.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        letreiroTituloPrincipal.setText("Biblioteca Syncria");
+
+        letreiroIcone.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        botaoDeSair.setToolTipText("");
+
+        javax.swing.GroupLayout painelDoLetreiroPrincipalLayout = new javax.swing.GroupLayout(painelDoLetreiroPrincipal);
+        painelDoLetreiroPrincipal.setLayout(painelDoLetreiroPrincipalLayout);
+        painelDoLetreiroPrincipalLayout.setHorizontalGroup(
+            painelDoLetreiroPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDoLetreiroPrincipalLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(letreiroIcone)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(letreiroTituloPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoDeSair)
+                .addGap(205, 205, 205))
+        );
+        painelDoLetreiroPrincipalLayout.setVerticalGroup(
+            painelDoLetreiroPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDoLetreiroPrincipalLayout.createSequentialGroup()
+                .addComponent(letreiroTituloPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout painelSegundarioLayout = new javax.swing.GroupLayout(painelSegundario);
-        painelSegundario.setLayout(painelSegundarioLayout);
-        painelSegundarioLayout.setHorizontalGroup(
-            painelSegundarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelSegundarioLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
+        letreiroTituloSegundario.setFont(new java.awt.Font("Segoe UI", 2, 36)); // NOI18N
+        letreiroTituloSegundario.setForeground(new java.awt.Color(0, 0, 0));
+        letreiroTituloSegundario.setText("Cadastro de Livros");
+
+        javax.swing.GroupLayout telaPrincipalLayout = new javax.swing.GroupLayout(telaPrincipal);
+        telaPrincipal.setLayout(telaPrincipalLayout);
+        telaPrincipalLayout.setHorizontalGroup(
+            telaPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(painelDoLetreiroPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(telaPrincipalLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
                 .addComponent(letreiroTituloSegundario)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(painelSegundarioLayout.createSequentialGroup()
@@ -676,7 +692,8 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        guiaRegistroEmprestimo.setText("Registro de Empréstimo |");
+        guiaRegistroEmprestimo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\zregistro de emprest.png")); // NOI18N
+        guiaRegistroEmprestimo.setText(" Registro de Empréstimo |");
         guiaRegistroEmprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 guiaRegistroEmprestimoMouseClicked(evt);
@@ -684,6 +701,7 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
         });
         jMenuBar1.add(guiaRegistroEmprestimo);
 
+        guiaListaLivrosEmprestados.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\livro emp. 24.png")); // NOI18N
         guiaListaLivrosEmprestados.setText("Lista de Livros Emprestados |");
         guiaListaLivrosEmprestados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -692,6 +710,7 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
         });
         jMenuBar1.add(guiaListaLivrosEmprestados);
 
+        guiaCadastroLivros.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\cadastro de livros 24.png")); // NOI18N
         guiaCadastroLivros.setText("Cadastro de Livros |");
         guiaCadastroLivros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -700,6 +719,7 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
         });
         jMenuBar1.add(guiaCadastroLivros);
 
+        guiaListaLivrosAcervo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\open-book.png")); // NOI18N
         guiaListaLivrosAcervo.setText("Lista de Livros no Acervo |");
         guiaListaLivrosAcervo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -716,6 +736,7 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
         });
         jMenuBar1.add(guiaRankingLeitores);
 
+        guiaBancoDadosTurmas.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\grupo-de-usuarios_(1).png")); // NOI18N
         guiaBancoDadosTurmas.setText("Banco de Dados das Turmas |");
         guiaBancoDadosTurmas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -724,15 +745,11 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
         });
         jMenuBar1.add(guiaBancoDadosTurmas);
 
-        guiaGrafico.setText("Grafico");
-        guiaGrafico.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                guiaGraficoMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(guiaGrafico);
+        guiaGrafico.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\vinticuatro.png")); // NOI18N
+        guiaGrafico.setText("Gráfico");
+        barraDoMenu.add(guiaGrafico);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(barraDoMenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

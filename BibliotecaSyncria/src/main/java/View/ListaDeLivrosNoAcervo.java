@@ -865,7 +865,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
                 .addGap(0, 0, 0))
         );
 
-        guiaRegistroEmprestimo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro.png")); // NOI18N
+        guiaRegistroEmprestimo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\zregistro de emprest.png")); // NOI18N
         guiaRegistroEmprestimo.setText("Registro de Empréstimo |");
         guiaRegistroEmprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -874,6 +874,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         });
         menuDeNavegacao.add(guiaRegistroEmprestimo);
 
+        guiaListaLivrosEmprestados.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\livro emp. 24.png")); // NOI18N
         guiaListaLivrosEmprestados.setText("Lista de Livros Emprestados |");
         guiaListaLivrosEmprestados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -882,6 +883,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         });
         menuDeNavegacao.add(guiaListaLivrosEmprestados);
 
+        guiaCadastroLivros.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\open-book.png")); // NOI18N
         guiaCadastroLivros.setText("Cadastro de Livros |");
         guiaCadastroLivros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -911,6 +913,11 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
             }
         });
         menuDeNavegacao.add(guiaBancoDadosTurmas);
+
+        guiaGrafico1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\vinticuatro.png")); // NOI18N
+        guiaGrafico1.setText("Gráfico");
+        menuDeNavegacao.add(guiaGrafico1);
+
 
         setJMenuBar(menuDeNavegacao);
 
@@ -1038,7 +1045,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
     private javax.swing.JLabel escrevaLista;
     private javax.swing.JMenu guiaBancoDadosTurmas;
     private javax.swing.JMenu guiaCadastroLivros;
-    private javax.swing.JMenu guiaGrafico;
+    private javax.swing.JMenu guiaGrafico1;
     private javax.swing.JMenu guiaListaLivrosAcervo;
     private javax.swing.JMenu guiaListaLivrosEmprestados;
     private javax.swing.JMenu guiaRankingLeitores;

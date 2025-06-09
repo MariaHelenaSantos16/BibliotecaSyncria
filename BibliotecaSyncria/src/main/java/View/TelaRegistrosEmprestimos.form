@@ -12,7 +12,10 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="guiaEmprestimos">
           <Properties>
-            <Property name="text" type="java.lang.String" value="| Registros Emprestimos |"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\zregistro de emprest.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Registros Emprestimos |"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="guiaEmprestimosMouseClicked"/>
@@ -20,6 +23,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="guiaLivros">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\livro emp. 24.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Listas de Livros Emprestados |"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="actionCommand" type="java.lang.String" value="Listas de livros Empr&#xe9;stados  |"/>
@@ -28,8 +34,22 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="guiaLivrosMouseClicked"/>
           </Events>
         </Menu>
+        <Menu class="javax.swing.JMenu" name="guiaCadastroLivros">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\cadastro de livros 24.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Cadastro de Livros |"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="guiaCadastroLivrosMouseClicked"/>
+          </Events>
+        </Menu>
         <Menu class="javax.swing.JMenu" name="guiaLivrosAcervo">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\open-book.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value=" Listas de livros Acervos |"/>
           </Properties>
           <Events>
@@ -38,6 +58,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="guiaRankingLeitores">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\ranking (1).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Ranking dos Leitores  |"/>
           </Properties>
           <Events>
@@ -46,11 +69,22 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="guiaBDT">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\grupo-de-usuarios_(1).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Banco de dados Turma |"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="guiaBDTMouseClicked"/>
           </Events>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="guiaGrafico">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Downloads\vinticuatro.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Gr&#xe1;fico"/>
+          </Properties>
         </Menu>
       </SubComponents>
     </Menu>
@@ -131,7 +165,7 @@
                                   <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="tituloTabelaSituacaoAlunoRE" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane1" pref="414" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane1" pref="418" max="32767" attributes="0"/>
                                       <Component id="jScrollPane4" alignment="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -247,7 +281,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
@@ -329,6 +363,9 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\livro_(1)_(2).png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Biblioteca Syncria"/>
               </Properties>
             </Component>
@@ -338,9 +375,6 @@
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ALUNO\Downloads\logout_(1).png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Sair"/>
               </Properties>
@@ -540,21 +574,23 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="iconeRE" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="tituloRegistrosEmprestimos" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="1497" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="iconeRE" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Component id="iconeRE" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="tituloRegistrosEmprestimos" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="16" max="32767" attributes="0"/>
@@ -570,6 +606,9 @@
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\ALUNO\Documents\NetBeansProjects\BibliotecaSyncria - Copia\BibliotecaSyncria\src\main\java\Images\impres.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Registros de Empr&#xe9;stimos"/>
               </Properties>
