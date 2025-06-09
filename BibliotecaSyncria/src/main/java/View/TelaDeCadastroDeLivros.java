@@ -6,7 +6,7 @@ package View;
 
 import Controller.NovoLivroControler;
 import Model.NovoLivroModel;
-
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,14 +15,13 @@ import Model.NovoLivroModel;
 public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
 
     /**
-     * Creates new form Telaldecadastrodelivros
+     * Creates new form TelaCadastroLivross
      */
-    
-    // criando um objeto da classe controller
     NovoLivroControler controler = new NovoLivroControler();
-    
+
     public TelaDeCadastroDeLivros() {
         initComponents();
+        
     }
 
     /**
@@ -34,7 +33,11 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        telaPrincipal = new javax.swing.JPanel();
+        painelDoLetreiroPrincipal = new javax.swing.JPanel();
+        letreiroTituloPrincipal = new java.awt.Label();
+        letreiroIcone = new javax.swing.JLabel();
+        painelSegundario = new javax.swing.JPanel();
+        letreiroTituloSegundario = new javax.swing.JLabel();
         painelPrincipal = new javax.swing.JPanel();
         letreiroTituloObra = new java.awt.Label();
         campoDeRespostaDeTituloDaObra = new java.awt.TextField();
@@ -75,16 +78,11 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
         tabelaDeListaDeLivrosCadastrados = new javax.swing.JTable();
         letreiroAquisiçao = new java.awt.Label();
         campoRespostaAquisicao = new java.awt.TextField();
-        label2 = new java.awt.Label();
-        textField1 = new java.awt.TextField();
-        label1 = new java.awt.Label();
+        letriroAnoFabricacao = new java.awt.Label();
+        campoDeRespostaDeAnoFabrecacao = new java.awt.TextField();
+        letreiroDatCadastro = new java.awt.Label();
         campoDeRespostaDeDataCadastro = new java.awt.TextField();
-        painelDoLetreiroPrincipal = new javax.swing.JPanel();
-        letreiroTituloPrincipal = new java.awt.Label();
-        letreiroIcone = new javax.swing.JLabel();
-        botaoDeSair = new javax.swing.JLabel();
-        letreiroTituloSegundario = new javax.swing.JLabel();
-        barraDoMenu = new javax.swing.JMenuBar();
+        jMenuBar1 = new javax.swing.JMenuBar();
         guiaRegistroEmprestimo = new javax.swing.JMenu();
         guiaListaLivrosEmprestados = new javax.swing.JMenu();
         guiaCadastroLivros = new javax.swing.JMenu();
@@ -94,12 +92,44 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
         guiaGrafico = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela de Cadastro de Livros");
-        setAlwaysOnTop(true);
-        setBackground(new java.awt.Color(153, 218, 201));
 
-        telaPrincipal.setBackground(new java.awt.Color(73, 112, 138));
-        telaPrincipal.setMaximumSize(new java.awt.Dimension(1920, 1080));
+        painelDoLetreiroPrincipal.setBackground(new java.awt.Color(208, 224, 235));
+        painelDoLetreiroPrincipal.setToolTipText("");
+        painelDoLetreiroPrincipal.setName(""); // NOI18N
+
+        letreiroTituloPrincipal.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        letreiroTituloPrincipal.setText("Biblioteca Syncria");
+
+        letreiroIcone.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        letreiroIcone.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro (1) (2).png")); // NOI18N
+
+        javax.swing.GroupLayout painelDoLetreiroPrincipalLayout = new javax.swing.GroupLayout(painelDoLetreiroPrincipal);
+        painelDoLetreiroPrincipal.setLayout(painelDoLetreiroPrincipalLayout);
+        painelDoLetreiroPrincipalLayout.setHorizontalGroup(
+            painelDoLetreiroPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDoLetreiroPrincipalLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(letreiroIcone)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(letreiroTituloPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painelDoLetreiroPrincipalLayout.setVerticalGroup(
+            painelDoLetreiroPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDoLetreiroPrincipalLayout.createSequentialGroup()
+                .addComponent(letreiroTituloPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(painelDoLetreiroPrincipalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(letreiroIcone, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        painelSegundario.setBackground(new java.awt.Color(73, 112, 138));
+
+        letreiroTituloSegundario.setFont(new java.awt.Font("Segoe UI", 2, 36)); // NOI18N
+        letreiroTituloSegundario.setForeground(new java.awt.Color(0, 0, 0));
+        letreiroTituloSegundario.setText("Cadastro de Livros");
 
         painelPrincipal.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -132,7 +162,8 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
         letreiroSubegenero.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         letreiroSubegenero.setText("Subgênero: ");
 
-        campoDeRespostaDeSubgenero.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        campoDeRespostaDeSubgenero.setEnabled(false);
+        campoDeRespostaDeSubgenero.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
 
         letreiroEdicao.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         letreiroEdicao.setText("Edição:");
@@ -153,7 +184,7 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
             }
         });
 
-        campoDeRespoataDeEdicao.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        campoDeRespoataDeEdicao.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         campoDeRespoataDeEdicao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoDeRespoataDeEdicaoActionPerformed(evt);
@@ -403,15 +434,20 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
 
         campoRespostaAquisicao.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
 
-        label2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        label2.setText("Ano de Fabricação");
+        letriroAnoFabricacao.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        letriroAnoFabricacao.setText("Ano de Fabricação");
 
-        textField1.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
+        campoDeRespostaDeAnoFabrecacao.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
 
-        label1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        label1.setText("Data de Cadastro");
+        letreiroDatCadastro.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        letreiroDatCadastro.setText("Data de Cadastro");
 
         campoDeRespostaDeDataCadastro.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
+        campoDeRespostaDeDataCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoDeRespostaDeDataCadastroActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelPrincipalLayout = new javax.swing.GroupLayout(painelPrincipal);
         painelPrincipal.setLayout(painelPrincipalLayout);
@@ -490,128 +526,108 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
                         .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelPrincipalLayout.createSequentialGroup()
                                 .addGap(196, 196, 196)
-                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(painelPrincipalLayout.createSequentialGroup()
-                                        .addComponent(letreiroObservacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(campoDeRespotaDeObservacao, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelPrincipalLayout.createSequentialGroup()
-                                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(2, 2, 2)
-                                        .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelPrincipalLayout.createSequentialGroup()
                                         .addComponent(letreiroAquisiçao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(campoRespostaAquisicao, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelPrincipalLayout.createSequentialGroup()
-                                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(campoRespostaAquisicao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(painelPrincipalLayout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(letreiroObservacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(campoDeRespotaDeObservacao, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(painelPrincipalLayout.createSequentialGroup()
+                                        .addComponent(letreiroDatCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(2, 2, 2)
-                                        .addComponent(campoDeRespostaDeDataCadastro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addComponent(campoDeRespostaDeDataCadastro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(painelPrincipalLayout.createSequentialGroup()
+                                        .addComponent(letriroAnoFabricacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(2, 2, 2)
+                                        .addComponent(campoDeRespostaDeAnoFabrecacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelPrincipalLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(97, 97, 97)))))
-                .addGap(106, 106, 106)
+                                .addGap(90, 90, 90)))))
+                .addGap(55, 55, 55)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(329, 329, 329))
+                .addGap(128, 128, 128))
         );
         painelPrincipalLayout.setVerticalGroup(
             painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(painelPrincipalLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(painelPrincipalLayout.createSequentialGroup()
+                        .addComponent(letreiroNDeCopias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(painelPrincipalLayout.createSequentialGroup()
-                                .addComponent(letreiroNDeCopias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(letreiroTituloObra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(campoDeRespostaDeTituloDaObra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(campoDeRespostaDeQuantidadeDeCopias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(letreiroIsbn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(campoDeRepostaDeIsbn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(letriroAutor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(campoDeRespostaDeAutor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(letreiroIdioma, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(campoDeRespostaDeIdioma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(letreiroTituloObra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoDeRespostaDeTituloDaObra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(campoDeRespostaDeQuantidadeDeCopias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(letreiroIsbn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(campoDeRepostaDeIsbn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(letriroAutor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(campoDeRespostaDeAutor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(letreiroIdioma, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoDeRespostaDeIdioma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(letreiroStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoDeRespotaDeStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(painelPrincipalLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(letreiroAnoPublicacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(campoDeRespostaDeAnoDePublicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                .addGap(20, 20, 20)
+                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(painelPrincipalLayout.createSequentialGroup()
+                        .addComponent(campoDeRespostaDeNumeroDeChamada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
                         .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(letreiroStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoDeRespotaDeStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(painelPrincipalLayout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(letreiroAnoPublicacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(campoDeRespostaDeAnoDePublicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                            .addComponent(NDeRegistros, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoDeRespostaDeNRgistros, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(274, 274, 274))
+                    .addGroup(painelPrincipalLayout.createSequentialGroup()
+                        .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(letreiroEditora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoDeRespostaDeEditora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(letreiroLocalizacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoDeRespostaDeLocalizacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(20, 20, 20)
-                        .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(painelPrincipalLayout.createSequentialGroup()
-                                .addComponent(campoDeRespostaDeNumeroDeChamada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20)
-                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(NDeRegistros, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(campoDeRespostaDeNRgistros, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(274, 274, 274))
+                        .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelPrincipalLayout.createSequentialGroup()
                                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(letreiroEditora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(campoDeRespostaDeEditora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(letreiroLocalizacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(campoDeRespostaDeLocalizacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(letreiroGeneroLiterario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoDeRespostaDeGeneroLiterario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(20, 20, 20)
                                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(painelPrincipalLayout.createSequentialGroup()
                                         .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(letreiroGeneroLiterario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(campoDeRespostaDeGeneroLiterario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(20, 20, 20)
+                                            .addComponent(campoDeRespostaDeSubgenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(letreiroSubegenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(19, 19, 19)
+                                        .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(letreiroEdicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(campoDeRespoataDeEdicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(painelPrincipalLayout.createSequentialGroup()
-                                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(campoDeRespostaDeSubgenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(letreiroSubegenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(19, 19, 19)
-                                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(letreiroEdicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(campoDeRespoataDeEdicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(painelPrincipalLayout.createSequentialGroup()
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(campoDeRespostaDeVolume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(painelPrincipalLayout.createSequentialGroup()
-                                                        .addGap(21, 21, 21)
-                                                        .addComponent(letreiroVolume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addGap(19, 19, 19)
-                                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(letreiroExemplar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(campoDeRespostaDeExemplar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(20, 20, 20)
-                                                .addComponent(NDeChamada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(325, 325, 325))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(campoDeRespostaDeVolume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(painelPrincipalLayout.createSequentialGroup()
-                                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(20, 20, 20)
-                                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(campoDeRespostaDeDataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(20, 20, 20)
-                                                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(campoDeRespotaDeObservacao, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(letreiroObservacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(33, 33, 33)
-                                                .addComponent(botaoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                                .addGap(21, 21, 21)
+                                                .addComponent(letreiroVolume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(19, 19, 19)
+                                        .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(letreiroExemplar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(campoDeRespostaDeExemplar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(20, 20, 20)
+                                        .addComponent(NDeChamada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(325, 325, 325))
                                     .addGroup(painelPrincipalLayout.createSequentialGroup()
                                         .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(letreiroAquisiçao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -646,15 +662,6 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDoLetreiroPrincipalLayout.createSequentialGroup()
                 .addComponent(letreiroTituloPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDoLetreiroPrincipalLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(painelDoLetreiroPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDoLetreiroPrincipalLayout.createSequentialGroup()
-                        .addComponent(letreiroIcone, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDoLetreiroPrincipalLayout.createSequentialGroup()
-                        .addComponent(botaoDeSair)
-                        .addGap(19, 19, 19))))
         );
 
         letreiroTituloSegundario.setFont(new java.awt.Font("Segoe UI", 2, 36)); // NOI18N
@@ -671,16 +678,18 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(letreiroTituloSegundario)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(painelSegundarioLayout.createSequentialGroup()
+                .addComponent(painelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        telaPrincipalLayout.setVerticalGroup(
-            telaPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(telaPrincipalLayout.createSequentialGroup()
-                .addComponent(painelDoLetreiroPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+        painelSegundarioLayout.setVerticalGroup(
+            painelSegundarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelSegundarioLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addComponent(letreiroTituloSegundario)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(painelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(painelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 795, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         guiaRegistroEmprestimo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\zregistro de emprest.png")); // NOI18N
@@ -690,7 +699,7 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
                 guiaRegistroEmprestimoMouseClicked(evt);
             }
         });
-        barraDoMenu.add(guiaRegistroEmprestimo);
+        jMenuBar1.add(guiaRegistroEmprestimo);
 
         guiaListaLivrosEmprestados.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\livro emp. 24.png")); // NOI18N
         guiaListaLivrosEmprestados.setText("Lista de Livros Emprestados |");
@@ -699,7 +708,7 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
                 guiaListaLivrosEmprestadosMouseClicked(evt);
             }
         });
-        barraDoMenu.add(guiaListaLivrosEmprestados);
+        jMenuBar1.add(guiaListaLivrosEmprestados);
 
         guiaCadastroLivros.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\cadastro de livros 24.png")); // NOI18N
         guiaCadastroLivros.setText("Cadastro de Livros |");
@@ -708,7 +717,7 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
                 guiaCadastroLivrosMouseClicked(evt);
             }
         });
-        barraDoMenu.add(guiaCadastroLivros);
+        jMenuBar1.add(guiaCadastroLivros);
 
         guiaListaLivrosAcervo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\open-book.png")); // NOI18N
         guiaListaLivrosAcervo.setText("Lista de Livros no Acervo |");
@@ -717,11 +726,15 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
                 guiaListaLivrosAcervoMouseClicked(evt);
             }
         });
-        barraDoMenu.add(guiaListaLivrosAcervo);
+        jMenuBar1.add(guiaListaLivrosAcervo);
 
-        guiaRankingLeitores.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\ranking.png")); // NOI18N
         guiaRankingLeitores.setText("Ranking dos Leitores |");
-        barraDoMenu.add(guiaRankingLeitores);
+        guiaRankingLeitores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                guiaRankingLeitoresMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(guiaRankingLeitores);
 
         guiaBancoDadosTurmas.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\BibliotecaSyncria - Copia\\BibliotecaSyncria\\src\\main\\java\\Images\\grupo-de-usuarios_(1).png")); // NOI18N
         guiaBancoDadosTurmas.setText("Banco de Dados das Turmas |");
@@ -730,7 +743,7 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
                 guiaBancoDadosTurmasMouseClicked(evt);
             }
         });
-        barraDoMenu.add(guiaBancoDadosTurmas);
+        jMenuBar1.add(guiaBancoDadosTurmas);
 
         guiaGrafico.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\vinticuatro.png")); // NOI18N
         guiaGrafico.setText("Gráfico");
@@ -743,124 +756,160 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(telaPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 63, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(painelDoLetreiroPrincipal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(painelSegundario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(telaPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(painelDoLetreiroPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(painelSegundario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void guiaRegistroEmprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRegistroEmprestimoMouseClicked
+    private void campoDeRespostaDeQuantidadeDeCopiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeRespostaDeQuantidadeDeCopiasActionPerformed
         // TODO add your handling code here:
-        
-         //criando obejeto da tela 3 para tela 1
-        TelaRegistrosEmprestimos tela3Paratela1 = new  TelaRegistrosEmprestimos();
-
-// abrindo a tela
-      tela3Paratela1.setVisible(true);
-        
-// fechar a tela de atual
-         dispose();
-         
-    }//GEN-LAST:event_guiaRegistroEmprestimoMouseClicked
-
-    private void guiaListaLivrosEmprestadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosEmprestadosMouseClicked
-        // TODO add your handling code here:
-        
-        
-         //criando obejeto da tela 3 para tela 2
-       ListaDeLivrosEmprestados tela3Paratela2 = new  ListaDeLivrosEmprestados();
-
-// abrindo a tela
-      tela3Paratela2.setVisible(true);
-        
-// fechar a tela de atual
-         dispose();
-    }//GEN-LAST:event_guiaListaLivrosEmprestadosMouseClicked
-
-    private void guiaCadastroLivrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaCadastroLivrosMouseClicked
-
-        
-    }//GEN-LAST:event_guiaCadastroLivrosMouseClicked
-
-    private void guiaListaLivrosAcervoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosAcervoMouseClicked
-        // TODO add your handling code here:
-         
-         //criando obejeto da tela 3 para tela 4
-       ListaDeLivrosNoAcervo tela3Paratela4 = new  ListaDeLivrosNoAcervo();
-
-// abrindo a tela
-      tela3Paratela4.setVisible(true);
-        
-// fechar a tela de atual
-         dispose();
-    }//GEN-LAST:event_guiaListaLivrosAcervoMouseClicked
-
-    private void guiaBancoDadosTurmasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaBancoDadosTurmasMouseClicked
-        // TODO add your handling code here:
-         //criando obejeto da tela 3 para tela 6
-       BancoDeDadosDasTurmas tela3Paratela6 = new  BancoDeDadosDasTurmas ();
-
-// abrindo a tela
-      tela3Paratela6.setVisible(true);
-        
-// fechar a tela de atual
-         dispose();
-        
-    }//GEN-LAST:event_guiaBancoDadosTurmasMouseClicked
-
-    private void campoDeRespostaDeAnoDePublicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeRespostaDeAnoDePublicacaoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoDeRespostaDeAnoDePublicacaoActionPerformed
-
-    private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
-        // TODO add your handling code here:
-
-        // criar objeto da classe
-        NovoLivroModel livros = new NovoLivroModel();
-        // cadastrar os dados dentro da clsse LivrosModel
-        livros.setTituloDaObra(campoDeRespostaDeTituloDaObra.getText());
-        livros.setAnoDePublicacao(campoDeRespostaDeAnoDePublicacao.getText());
-        livros.setAutor(campoDeRespostaDeAutor.getText());
-        livros.setEdicao(campoDeRespoataDeEdicao.getText());
-        livros.setEditora(campoDeRespostaDeEditora.getText());
-        livros.setExemplar(campoDeRespostaDeExemplar.getText());
-        livros.setGeberoLiterario((String)campoDeRespostaDeGeneroLiterario.getSelectedItem());
-        livros.setIdioma(campoDeRespostaDeIdioma.getText());
-        livros.setIsbn(campoDeRepostaDeIsbn.getText());
-        livros.setLocalizacao(campoDeRespostaDeLocalizacao.getText());
-        livros.setObservacao(campoDeRespotaDeObservacao.getText());
-        livros.setStatus(campoDeRespotaDeStatus.getText());
-        livros.setSubegenero(campoDeRespostaDeSubgenero.getText());
-        livros.setVolume(Integer.parseInt(campoDeRespostaDeVolume.getText()));
-        livros.setnDeChamada(campoDeRespostaDeNumeroDeChamada.getText());
-        livros.setnDeCopia((String)campoDeRespostaDeQuantidadeDeCopias.getSelectedItem());
-        livros.setnDeRegistros(campoDeRespostaDeNRgistros.getText());
-        
-        controler.CadastroLivro(livros);
-        
-    }//GEN-LAST:event_botaoSalvarActionPerformed
-
-    private void campoDeRespotaDeStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeRespotaDeStatusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoDeRespotaDeStatusActionPerformed
-
-    private void campoDeRespostaDeExemplarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeRespostaDeExemplarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoDeRespostaDeExemplarActionPerformed
+    }//GEN-LAST:event_campoDeRespostaDeQuantidadeDeCopiasActionPerformed
 
     private void campoDeRespoataDeEdicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeRespoataDeEdicaoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoDeRespoataDeEdicaoActionPerformed
 
-    private void campoDeRespostaDeQuantidadeDeCopiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeRespostaDeQuantidadeDeCopiasActionPerformed
+    private void campoDeRespostaDeExemplarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeRespostaDeExemplarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDeRespostaDeQuantidadeDeCopiasActionPerformed
+    }//GEN-LAST:event_campoDeRespostaDeExemplarActionPerformed
+
+    private void campoDeRespotaDeStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeRespotaDeStatusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoDeRespotaDeStatusActionPerformed
+
+    private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
+       try {
+        NovoLivroModel livro = new NovoLivroModel();
+
+        livro.setTituloObra(campoDeRespostaDeTituloDaObra.getText());
+        livro.setNumeroCopias(Integer.parseInt(campoDeRespostaDeQuantidadeDeCopias.getSelectedItem().toString()));
+        livro.setDataCadastro(campoDeRespostaDeDataCadastro.getText());
+        livro.setGenerosLiterarios(campoDeRespostaDeGeneroLiterario.getSelectedItem().toString());
+        livro.setSubgenerosLiterarios(campoDeRespostaDeSubgenero.getText());
+        livro.setAutor(campoDeRespostaDeAutor.getText());
+        livro.setNumeroRegistro(Integer.parseInt(campoDeRespostaDeNRgistros.getText()));
+        livro.setEdicao(campoDeRespoataDeEdicao.getText());
+        livro.setVolume(Integer.parseInt(campoDeRespostaDeVolume.getText()));
+        livro.setLocalizacao(campoDeRespostaDeLocalizacao.getText());
+        livro.setEditora(campoDeRespostaDeEditora.getText());
+        livro.setAnoFabricacao(Integer.parseInt(campoDeRespostaDeAnoFabrecacao.getText()));
+        livro.setAnoPublicacao(Integer.parseInt(campoDeRespostaDeAnoDePublicacao.getText()));
+        livro.setAquisicao(campoRespostaAquisicao.getText());
+        livro.setExemplar(campoDeRespostaDeExemplar.getText());
+        livro.setNumeroChamada(campoDeRespostaDeNumeroDeChamada.getText());
+        livro.setIsbn(campoDeRepostaDeIsbn.getText());
+        livro.setStatus(campoDeRespotaDeStatus.getText());
+        livro.setObservacoes(campoDeRespotaDeObservacao.getText());
+        livro.setQuantidadeTituloEmprestado(0); // Padrão zero no cadastro
+        livro.setQuantidadeTituloAcervo(Integer.parseInt(campoDeRespostaDeQuantidadeDeCopias.getSelectedItem().toString()));
+
+        // Chamada ao DAO
+        
+        controler.inserirLivro(livro);
+
+        JOptionPane.showMessageDialog(this, "Livro cadastrado com sucesso!");
+
+       
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Erro ao cadastrar livro: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+        e.printStackTrace();
+    }
+    }//GEN-LAST:event_botaoSalvarActionPerformed
+
+    private void campoDeRespostaDeAnoDePublicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeRespostaDeAnoDePublicacaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoDeRespostaDeAnoDePublicacaoActionPerformed
+
+    private void campoDeRespostaDeDataCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeRespostaDeDataCadastroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoDeRespostaDeDataCadastroActionPerformed
+
+    private void guiaGraficoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaGraficoMouseClicked
+        // TODO add your handling code here:
+        TelaGraficos grafico =new TelaGraficos();
+        grafico.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_guiaGraficoMouseClicked
+
+    private void guiaBancoDadosTurmasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaBancoDadosTurmasMouseClicked
+        // TODO add your handling code here:
+        //criar objeto da classe 
+        BancoDeDadosDasTurmas bancoDadosTurma = new BancoDeDadosDasTurmas();
+               // abrindo a tela
+                bancoDadosTurma.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_guiaBancoDadosTurmasMouseClicked
+
+    private void guiaRankingLeitoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRankingLeitoresMouseClicked
+        // TODO add your handling code here:
+       TelaRankingDeLeitores rankisngDosLeitores = new TelaRankingDeLeitores (); 
+               rankisngDosLeitores.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_guiaRankingLeitoresMouseClicked
+
+    private void guiaListaLivrosAcervoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosAcervoMouseClicked
+        // TODO add your handling code here:
+           
+        //criar objeto da classe 
+        ListaDeLivrosNoAcervo livrosAcervo = new ListaDeLivrosNoAcervo();
+               // abrindo a tela
+                livrosAcervo.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_guiaListaLivrosAcervoMouseClicked
+
+    private void guiaCadastroLivrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaCadastroLivrosMouseClicked
+        // TODO add your handling code here:  
+        //criar objeto da classe 
+        TelaDeCadastroDeLivros cadastroLivro = new TelaDeCadastroDeLivros();
+               // abrindo a tela
+                cadastroLivro.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_guiaCadastroLivrosMouseClicked
+
+    private void guiaListaLivrosEmprestadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosEmprestadosMouseClicked
+        // TODO add your handling code here:   
+       //criar objeto da classe 
+        ListaDeLivrosEmprestados listaEmprestado = new ListaDeLivrosEmprestados();
+               // abrindo a tela
+                listaEmprestado.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_guiaListaLivrosEmprestadosMouseClicked
+
+    private void guiaRegistroEmprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRegistroEmprestimoMouseClicked
+        // TODO add your handling code here:
+             //criar objeto da classe 
+        TelaRegistrosEmprestimos registroEmprestimo = new TelaRegistrosEmprestimos();
+               // abrindo a tela
+                registroEmprestimo.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ; 
+        
+    }//GEN-LAST:event_guiaRegistroEmprestimoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -903,12 +952,11 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Label NDeChamada;
     private java.awt.Label NDeRegistros;
-    private javax.swing.JMenuBar barraDoMenu;
-    private javax.swing.JLabel botaoDeSair;
     private javax.swing.JButton botaoSalvar;
     private java.awt.TextField campoDeRepostaDeIsbn;
     private java.awt.TextField campoDeRespoataDeEdicao;
     private javax.swing.JTextField campoDeRespostaDeAnoDePublicacao;
+    private java.awt.TextField campoDeRespostaDeAnoFabrecacao;
     private java.awt.TextField campoDeRespostaDeAutor;
     private java.awt.TextField campoDeRespostaDeDataCadastro;
     private java.awt.TextField campoDeRespostaDeEditora;
@@ -932,11 +980,11 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
     private javax.swing.JMenu guiaListaLivrosEmprestados;
     private javax.swing.JMenu guiaRankingLeitores;
     private javax.swing.JMenu guiaRegistroEmprestimo;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private java.awt.Label label1;
-    private java.awt.Label label2;
     private java.awt.Label letreiroAnoPublicacao;
     private java.awt.Label letreiroAquisiçao;
+    private java.awt.Label letreiroDatCadastro;
     private java.awt.Label letreiroEdicao;
     private java.awt.Label letreiroEditora;
     private java.awt.Label letreiroExemplar;
@@ -953,11 +1001,13 @@ public class TelaDeCadastroDeLivros extends javax.swing.JFrame {
     private java.awt.Label letreiroTituloPrincipal;
     private javax.swing.JLabel letreiroTituloSegundario;
     private java.awt.Label letreiroVolume;
+    private java.awt.Label letriroAnoFabricacao;
     private java.awt.Label letriroAutor;
     private javax.swing.JPanel painelDoLetreiroPrincipal;
     private javax.swing.JPanel painelPrincipal;
+    private javax.swing.JPanel painelSegundario;
     private javax.swing.JTable tabelaDeListaDeLivrosCadastrados;
-    private javax.swing.JPanel telaPrincipal;
-    private java.awt.TextField textField1;
     // End of variables declaration//GEN-END:variables
+
+    
 }

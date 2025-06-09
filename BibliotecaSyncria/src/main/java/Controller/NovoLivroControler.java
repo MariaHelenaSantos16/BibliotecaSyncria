@@ -9,56 +9,48 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Date;
-;
 
+;
 
 /**
  *
  * @author ALUNO
  */
 public class NovoLivroControler {
-    
-   public boolean CadastroLivro(NovoLivroModel n ) {
-    String sql = "INSERT INTO NovoLivroModel (tituloObra, numeroCopias, dataCadastro, "
-            + "generosLiterarios, subgenerosLiterarios, autor, numeroRegistro, edicao, volume, localizacao, editora, anoFabricacao,"
-            + " anoPublicacao, aquisicao, exemplar, numeroChamada, isbn, status, observacoes, quantidadeTituloEmprestado, quantidadeTituloAcervo) VALUES)"
-            + " (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    try (Connection conn = ConexaoComBancoDados.conectar();
-         PreparedStatement ps = conn.prepareStatement(sql)) {
 
-       ps.setString(1, n.getTituloObra());
-ps.setInt(2, n.getNumeroCopias());
-ps.setString(3,   n.getDataCadastro());
-ps.setString(4, n.getGenerosLiterarios());
-ps.setString(5, n.getSubgenerosLiterarios());
-ps.setString(6, n.getAutor());
-ps.setInt(7, n.getNumeroRegistro());
-ps.setString(8, n.getEdicao());
-ps.setInt(9, n.getVolume());
-ps.setString(10, n.getLocalizacao());
-ps.setString(11, n.getEditora());
-ps.setInt(12, n.getAnoFabricacao());
-ps.setInt(13, n.getAnoPublicacao());
-ps.setString(14, n.getAquisicao());
-ps.setString(15, n.getExemplar());
-ps.setString(16, n.getNumeroChamada());
-ps.setString(17, n.getIsbn());
-ps.setString(18, n.getStatus());
-ps.setString(19, n.getObservacoes());
-ps.setInt(20, n.getQuantidadeTituloEmprestado());
-ps.setInt(21, n.getQuantidadeTituloAcervo());
+     public void inserirLivro(NovoLivroModel livro) {
+        String sql = "INSERT INTO livro (tituloObra, numeroCopias, dataCadastro, generoLiterarios, subgenerosLiterarios, autor, numeroRegistro, edicao, volume, localizacao, editora, anoFabricacao, anoPublicacao, aquisicao, exemplar, numeroChamada, isbn, statusLivro, observacoes, quantidadeTituloEmprestados, quatidadeTituloAcervo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-  // ajuste o tipo e o campo conforme sua entidade
-        // Repita para os demais campos
+        try (Connection conn = ConexaoComBancoDados.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-        int linhasAfetadas = ps.executeUpdate();
-        return linhasAfetadas > 0;
+            stmt.setString(1, livro.getTituloObra());
+            stmt.setInt(2, livro.getNumeroCopias());
+            stmt.setString(3, livro.getDataCadastro());
+            stmt.setString(4, livro.getGenerosLiterarios());
+            stmt.setString(5, livro.getSubgenerosLiterarios());
+            stmt.setString(6, livro.getAutor());
+            stmt.setInt(7, livro.getNumeroRegistro());
+            stmt.setString(8, livro.getEdicao());
+            stmt.setInt(9, livro.getVolume());
+            stmt.setString(10, livro.getLocalizacao());
+            stmt.setString(11, livro.getEditora());
+            stmt.setInt(12, livro.getAnoFabricacao());
+            stmt.setInt(13, livro.getAnoPublicacao());
+            stmt.setString(14, livro.getAquisicao());
+            stmt.setString(15, livro.getExemplar());
+            stmt.setString(16, livro.getNumeroChamada());
+            stmt.setString(17, livro.getIsbn());
+            stmt.setString(18, livro.getStatus());
+            stmt.setString(19, livro.getObservacoes());
+            stmt.setInt(20, livro.getQuantidadeTituloEmprestado());
+            stmt.setInt(21, livro.getQuantidadeTituloAcervo());
 
-    } catch (SQLException e) {
-        e.printStackTrace();
-        return false;
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao inserir livro: " + e.getMessage());
+        }
     }
-}
- 
-    
+
 }

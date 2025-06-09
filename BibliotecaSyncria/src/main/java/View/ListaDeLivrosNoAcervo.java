@@ -42,8 +42,8 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         guiaCadastroLivros = new javax.swing.JMenu();
         guiaListaLivrosAcervo = new javax.swing.JMenu();
         guiaRankingLeitores = new javax.swing.JMenu();
+        guiaGrafico = new javax.swing.JMenu();
         guiaBancoDadosTurmas = new javax.swing.JMenu();
-        guiaGrafico1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista de Livros no Acervo");
@@ -904,6 +904,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
             }
         });
         menuDeNavegacao.add(guiaRankingLeitores);
+        menuDeNavegacao.add(guiaGrafico);
 
         guiaBancoDadosTurmas.setText("Banco de Dados das Turmas |");
         guiaBancoDadosTurmas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -916,6 +917,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         guiaGrafico1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\vinticuatro.png")); // NOI18N
         guiaGrafico1.setText("Gráfico");
         menuDeNavegacao.add(guiaGrafico1);
+
 
         setJMenuBar(menuDeNavegacao);
 
